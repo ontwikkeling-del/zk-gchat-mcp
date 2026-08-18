@@ -27,6 +27,14 @@ SCOPES = [
     "https://www.googleapis.com/auth/chat.messages.create",
     "https://www.googleapis.com/auth/chat.memberships",
     "https://www.googleapis.com/auth/directory.readonly",
+    # Nodig voor bijlagen uploaden naar Chat (media.upload); alleen files die
+    # deze app zelf aanmaakt/upload - geen toegang tot bestaande Drive-bestanden.
+    "https://www.googleapis.com/auth/drive.file",
+    # "Alles gelezen" in de Chat-UI zelf (spaceReadState PATCH). PAS ACTIVEREN
+    # (uncomment) direct vóór een re-auth door Dennis (dennis@zwartekraai.nl!):
+    # een scope in deze lijst die NIET in het huidige token zit, laat de
+    # token-refresh falen met invalid_scope en breekt ALLE chat-calls.
+    # "https://www.googleapis.com/auth/chat.users.readstate",
 ]
 
 _PKG_DIR = Path(__file__).resolve().parent
