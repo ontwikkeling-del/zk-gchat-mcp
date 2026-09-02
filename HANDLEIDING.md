@@ -22,7 +22,9 @@ Het script regelt alles zelf: het installeert de tool en zet hem klaar in Claude
 
 ## Stap 3: Inloggen
 
-Tijdens de installatie opent je browser. Log in met je **@zwartekraai.nl** account en klik op toestaan. Daarna mag je het browservenster sluiten. Je hoeft dit maar een keer te doen.
+Tijdens de installatie opent je browser. Log in met je **@zwartekraai.nl** account en klik op toestaan.
+
+**Laat het tabblad open tot je ziet dat het gelukt is.** Het script wacht op een terugkoppeling van Google via een tijdelijk lokaal adres. Sluit je het tabblad daarvoor, dan komt die nooit binnen en blijft je token leeg. Draai het script dan gewoon opnieuw. Zodra de pagina meldt dat het gelukt is, mag je hem dicht doen. Je hoeft dit maar een keer te doen.
 
 ## Stap 4: Klaar
 

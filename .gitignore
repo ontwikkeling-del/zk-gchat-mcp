@@ -5,3 +5,5 @@ token.json
 .env
 build/
 dist/
+venv/
+.venv/

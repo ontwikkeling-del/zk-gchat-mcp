@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Zwarte Kraai Google Chat MCP-server (lezen + sturen, per-gebruiker OAuth)"
 requires-python = ">=3.10"
 dependencies = [
-    "mcp>=1.2.0",
+    # Bovengrens is nodig: in mcp 2.x heet FastMCP voortaan MCPServer, waardoor
+    # `from mcp.server.fastmcp import FastMCP` in server.py niet meer bestaat.
+    # Zonder grens pakt pip de nieuwste versie en breekt elke verse installatie
+    # (gemeten 02-09-2026 met mcp 2.1.1). Bestaande installaties op 1.x merken niets.
+    "mcp>=1.2.0,<2",
     "google-auth>=2.0",
     "google-auth-oauthlib>=1.0",
     "google-api-python-client>=2.0",
